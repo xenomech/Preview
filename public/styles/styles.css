@@ -1,25 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); */
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-}
+} */
 
-.nav li {
-  padding-left: 1rem;
-  list-style: none;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.nav li a {
-  text-decoration: none;
-  color: black;
-  transition: all ease-in-out .5s;
-}
 
-.nav li a:hover {
-  text-decoration: underline;
-  color: blue;
+@layer components {
+  .active {
+    @apply bg-blue-600 text-neutral-100
+  }
 }
