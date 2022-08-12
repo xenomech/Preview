@@ -5,11 +5,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/public/styles/styles.css" rel="stylesheet" type="text/css">
+  <link href="/public/styles/utils.css" rel="stylesheet" type="text/css">
+
   <title>Preview Generate</title>
 </head>
 
-<body>
-  Generate images on the go
+<body class="container-xl">
+  <script>
+    const test = () => {
+      console.log(test)
+    }
+  </script>
+  <nav class="flex justify-between items-center p-1 text-xl">
+    <div>
+      <p>🖼️ Preview</p>
+    </div>
+    <ul class="nav flex">
+      <li><a href="#">Docs</a></li>
+      <li><a href="#">Generate</a></li>
+    </ul>
+  </nav>
+  <div class="flex">
+    <Input id="height" type="text" placeholder="Height"></Input>
+    <Input id="width" type="text" placeholder="width"></Input>
+    <Input id="heading" type="text" placeholder="Heading"></Input>
+    <Input id="subheading" type="text" placeholder="subheading"></Input>
+    <Input id="author" type="text" placeholder="author"></Input>
+    <img src="https://preview-generate.herokuapp.com/get?width=1200&height=600&theme=themeOne&heading=Gokul%20Suresh"
+      alt="text" />
+    <p id="url">https://preview-generate.herokuapp.com/</p>
+  </div>
 </body>
 
 </html>

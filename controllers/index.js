@@ -9,7 +9,7 @@ const get = (req, res) => {
   const author = req.query.author;
 
   const buffer = generate({ width, height, theme, heading, subHeading, author });
-  res.writeHead(200, { 'Content-Type': 'image/png', 'Cache-Control': `immutable, no-transform, s-max-age=2592000, max-age=2592000` });
+  res.writeHead(200, { 'Content-Type': 'image/png' });
   res.end(buffer);
 }
 
