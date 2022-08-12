@@ -1,7 +1,9 @@
 require('dotenv').config()
 const express = require('express')
 var cors = require('cors')
+
 const { breakpoints } = require("./helpers/constants")
+
 const app = express()
 const port = process.env.PORT || 3000
 

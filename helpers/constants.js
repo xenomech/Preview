@@ -24,7 +24,6 @@ const breakpoints = [
 ]
 
 const themes = {
-
 }
 
 module.exports = {
