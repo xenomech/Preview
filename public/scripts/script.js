@@ -71,8 +71,8 @@ const genURL = () => {
 })
 
 generate.addEventListener('click', () => {
-	let finalUrl = genURL();
-	image.src = finalUrl;
+  let finalUrl = genURL();
+  image.src = finalUrl;
 });
 
 link.addEventListener("click", () => {
@@ -92,7 +92,6 @@ const copyToClip = ({ text, currentMessage, updatedMessage }) => {
   link.firstElementChild.innerHTML = updatedMessage
   link.classList.remove("bg-neutral-900")
   link.classList.add("active")
-  console.log(link.classList)
   setTimeout(() => {
     link.firstElementChild.innerHTML = currentMessage
     link.classList.add("bg-neutral-900")
