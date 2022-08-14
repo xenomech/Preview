@@ -37,12 +37,14 @@ const renderSelection = (e) => {
 auto.addEventListener("click", renderSelection)
 
 const renderBreakpoints = (e) => {
-  Array.from(breakpoints.children).map(item => item.classList.remove('active'))
-  e.target.classList.toggle("active")
-  delete options.height
-  delete options.width
-  options.breakpoint = e.target.getAttribute("breakpoint")
-  url.innerHTML = genURL()
+  if (e.target.getAttribute("breakpoint")) {
+    Array.from(breakpoints.children).map(item => item.classList.remove('active'))
+    e.target.classList.toggle("active")
+    delete options.height
+    delete options.width
+    options.breakpoint = e.target.getAttribute("breakpoint")
+    url.innerHTML = genURL()
+  }
 }
 breakpoints.addEventListener('click', renderBreakpoints)
 

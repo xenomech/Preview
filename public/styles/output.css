@@ -602,6 +602,11 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -672,6 +677,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.break-words {
+  overflow-wrap: break-word;
 }
 
 .break-all {
@@ -750,10 +759,6 @@ video {
   padding: 0.5rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-2\.5 {
   padding: 0.625rem;
 }
@@ -768,14 +773,19 @@ video {
   padding-bottom: 2rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .px-3 {
@@ -895,17 +905,21 @@ input[type="number"]::-webkit-inner-spin-button {
     left: 42%;
   }
 
-  .md\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
+  .md\:mx-5 {
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  .md\:-mt-24 {
+    margin-top: -6rem;
   }
 
   .md\:flex {
     display: flex;
   }
 
-  .md\:w-3\/6 {
-    width: 50%;
+  .md\:w-4\/6 {
+    width: 66.666667%;
   }
 
   .md\:w-full {
@@ -920,20 +934,21 @@ input[type="number"]::-webkit-inner-spin-button {
     padding: 1.25rem;
   }
 
-  .md\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+  .md\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
-  .md\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
-  .lg\:-mt-24 {
-    margin-top: -6rem;
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .lg\:max-w-7xl {
