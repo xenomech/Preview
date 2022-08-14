@@ -24,7 +24,7 @@ const breakpoints = [
 ]
 
 const themes = [{
-  name: "themeOne",
+  name: "Blackberry",
   values: {
     colorOne: "#2B2B2B",
     colorTwo: "#0E0E0E",
@@ -35,7 +35,7 @@ const themes = [{
   }
 },
 {
-  name: "themeTwo",
+  name: "PinkyPurple",
   values: {
     colorOne: "#7303c0",
     colorTwo: "#ec38bc",
