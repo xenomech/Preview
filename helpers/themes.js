@@ -3,7 +3,6 @@ const { themes } = require('./constants')
 
 const Theme = ({ width, height, heading, subHeading, author, theme }) => {
   selectedTheme = themes.filter(item => item.name === theme)[0]
-  console.log(selectedTheme)
   try {
     const canvas = createCanvas(width, height)
     const context = canvas.getContext('2d')

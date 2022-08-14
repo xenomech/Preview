@@ -3,8 +3,7 @@ const breakpoints = [
     breakpoint: "2xl",
     width: "1400",
     height: "800"
-  },
-  {
+  }, {
     breakpoint: "xl",
     width: "1200",
     height: "630"
@@ -44,7 +43,17 @@ const themes = [
       hTwoFont: "'28px Menlo'",
       hThreeFont: '22px Menlo',
     }
-  },]
+  }, {
+    name: "orangeFun",
+    values: {
+      colorOne: "#fc4a1a",
+      colorTwo: "#f7b733",
+      fontColor: "#FFFFFF",
+      hOneFont: "'bold 36px Menlo'",
+      hTwoFont: "'28px Menlo'",
+      hThreeFont: '22px Menlo',
+    }
+  }]
 
 module.exports = {
   breakpoints,

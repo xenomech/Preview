@@ -19,7 +19,7 @@ const link = document.getElementById("link")
 let options = {
   heading: "Insert heading here",
   sub_heading: "insert sub heading here",
-  theme: "themeOne"
+  theme: "PinkyPurple "
 }
 let gen_url = "https://preview-generate.herokuapp.com/get?"
 const renderSelection = (e) => {
