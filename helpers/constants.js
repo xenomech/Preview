@@ -1,31 +1,52 @@
 const breakpoints = [
   {
     breakpoint: "2xl",
-    height: "",
-    width: ""
+    width: "1400",
+    height: "800"
   },
   {
     breakpoint: "xl",
-    height: "",
-    width: ""
+    width: "1200",
+    height: "630"
   }, {
     breakpoint: "lg",
-    height: "",
-    width: ""
+    width: "1000",
+    height: "600"
   }, {
     breakpoint: "md",
-    height: "",
-    width: ""
+    width: "800",
+    height: "400"
   }, {
     breakpoint: "sm",
-    height: "",
-    width: ""
-  }
+    width: "800",
+    height: "400"
+  },
 ]
 
-const themes = {
-}
+const themes = [{
+  name: "themeOne",
+  values: {
+    colorOne: "#2B2B2B",
+    colorTwo: "#0E0E0E",
+    fontColor: "#FFFFFF",
+    hOneFont: "'bold 36px Menlo'",
+    hTwoFont: "'28px Menlo'",
+    hThreeFont: '22px Menlo',
+  }
+},
+{
+  name: "themeTwo",
+  values: {
+    colorOne: "#7303c0",
+    colorTwo: "#ec38bc",
+    fontColor: "#FFFFFF",
+    hOneFont: "'bold 36px Menlo'",
+    hTwoFont: "'28px Menlo'",
+    hThreeFont: '22px Menlo',
+  }
+}]
 
 module.exports = {
-  breakpoints
+  breakpoints,
+  themes
 }
