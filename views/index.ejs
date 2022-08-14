@@ -122,14 +122,31 @@
                 placeholder="Author">
             </div>
           </div>
+
           <div
-            class="md:flex flex-col justify-center items-center p-2 my-5 mx-2 md:mx-5 font-mono bg-zinc-800 rounded-xl text-center">
-            <p id="url" class="break-all flex items-center justify-center md:w-full text-center p-2"></p>
-            <div class="bg-neutral-900 p-2 cursor-pointer rounded-xl transition-all ease-in-out duration-100" id="link">
-              <p class="break-words">🔗 Generate and copy link to clipboard</p>
-            </div>
-          </div>
-        </div>
+							class="md:flex flex-col justify-center items-center p-2 my-5 mx-2 md:mx-5 font-mono bg-zinc-800 rounded-xl text-center"
+						>
+							<p
+								id="url"
+								class="break-all flex items-center justify-center md:w-full text-center p-2"
+							></p>
+						</div>
+
+						<div class="flex gap-3 justify-center items-center">
+							<div
+								class="bg-neutral-900 p-2 cursor-pointer rounded-xl transition-all ease-in-out duration-100"
+								id="generate"
+							>
+								<p class="break-words">🚀 Generate</p>
+							</div>
+
+							<div
+								class="bg-neutral-900 p-2 cursor-pointer rounded-xl transition-all ease-in-out duration-100"
+								id="link"
+							>
+								<p class="break-words">🔗 Copy link to clipboard</p>
+							</div>
+						</div>
       </div>
     </section>
   </div>

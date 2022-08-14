@@ -13,6 +13,7 @@ const theme = document.getElementById("theme")
 
 const url = document.getElementById("url")
 const image = document.getElementById("image")
+const generate = document.getElementById('generate');
 const link = document.getElementById("link")
 
 //url components
@@ -68,6 +69,11 @@ const genURL = () => {
     url.innerHTML = genURL()
   })
 })
+
+generate.addEventListener('click', () => {
+	let finalUrl = genURL();
+	image.src = finalUrl;
+});
 
 link.addEventListener("click", () => {
   let finalUrl = genURL()
