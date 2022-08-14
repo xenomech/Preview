@@ -558,6 +558,18 @@ video {
   color: rgb(245 245 245 / var(--tw-text-opacity));
 }
 
+.fixed {
+  position: fixed;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.left-\[25\%\] {
+  left: 25%;
+}
+
 .m-5 {
   margin: 1.25rem;
 }
@@ -570,9 +582,14 @@ video {
   margin: 0.75rem;
 }
 
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mx-2 {
@@ -587,10 +604,6 @@ video {
 
 .ml-5 {
   margin-left: 1.25rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
 }
 
 .block {
@@ -629,10 +642,6 @@ video {
   max-width: 56rem;
 }
 
-.max-w-lg {
-  max-width: 32rem;
-}
-
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -643,6 +652,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-end {
@@ -661,8 +674,8 @@ video {
   justify-content: space-between;
 }
 
-.break-words {
-  overflow-wrap: break-word;
+.break-all {
+  word-break: break-all;
 }
 
 .rounded-xl {
@@ -728,6 +741,11 @@ video {
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -740,19 +758,14 @@ video {
   padding: 0.625rem;
 }
 
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.py-28 {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
 }
 
 .px-4 {
@@ -878,27 +891,49 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 @media (min-width: 768px) {
+  .md\:left-\[42\%\] {
+    left: 42%;
+  }
+
   .md\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:w-3\/6 {
     width: 50%;
   }
 
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
   .md\:p-5 {
     padding: 1.25rem;
+  }
+
+  .md\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .md\:py-28 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 }
 
 @media (min-width: 1024px) {
   .lg\:-mt-24 {
     margin-top: -6rem;
-  }
-
-  .lg\:flex {
-    display: flex;
   }
 
   .lg\:max-w-7xl {

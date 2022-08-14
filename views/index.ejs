@@ -6,130 +6,137 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta type="og:image"
-    content="https://preview-generate.herokuapp.com/get?heading=Generate%20Template%20image&sub_heading=Serve%20it%20from%20a%20link&theme=PinkyPurple&author=Developed%20By%20Gokul%20Suresh&breakpoint=xl" />
+    content="https://preview-generate.herokuapp.com/get?heading=Generate%20template%20images%20for%20Open%20Graph%20or%20Twitter&sub_heading=&theme=PinkyPurple&breakpoint=xl&author=Developed%20by%20Gokul%20Suresh" />
   <meta type="og:title" content="Preview Generator" />
+  <meta type="og:description" content="Generate Images on the Go!" />
   <link href="/public/styles/output.css" rel="stylesheet" type="text/css">
   <title>Preview Generate</title>
 </head>
 
-<body class="lg:max-w-7xl text-neutral-100 bg-neutral-900 md:mx-auto m-5">
-  <nav class="flex justify-between items-center md:p-5 text-xl">
-    <div>
-      <p class="">Generate Previews</p>
-    </div>
-    <ul class="flex justify-between items-center">
-      <li class="p-2 ml-5">
-        <a href="https://github.com/xenomech/Preview"
-          class="hover:text-blue-500 transition-all ease-in-out duration-100">Github</a>
-      </li>
-    </ul>
-  </nav>
-
-  <section class="py-20">
-    <div>
-      <h1 class="text-5xl py-8 font-bold flex justify-center items-center">
-        Generate Images on the go!
-      </h1>
-      <h2 class="text-2xl font-thin flex justify-center items-center">Create and serve images from a single link</h2>
-    </div>
-    <div class="py-28 flex flex-col justify-center items-center">
-      <div class="max-w-4xl">
-        <img id="image" class="rounded-xl shadow-xl hidden lg:flex"
-          src="https://preview-generate.herokuapp.com/get?heading=Generate%20Template%20image&sub_heading=Serve%20it%20from%20a%20link&theme=PinkyPurple&author=Developed%20By%20Gokul%20Suresh&breakpoint=xl" />
+<body class=" text-neutral-100 bg-neutral-900">
+  <div class="lg:max-w-7xl md:mx-auto m-5">
+    <nav class="flex justify-between items-center md:p-5 text-xl">
+      <div>
+        <p class="">Generate Previews</p>
       </div>
-      <div class="md:w-3/6 w-full p-5 lg:-mt-24 rounded-xl bg-black text-neutral-100 shadow-xl">
+      <ul class="flex justify-between items-center">
+        <li class="p-2 ml-5">
+          <a href="https://github.com/xenomech/Preview"
+            class="hover:text-blue-500 transition-all ease-in-out duration-100">Github</a>
+        </li>
+      </ul>
+    </nav>
 
-        <div class="flex justify-between items-end">
-          <div class="flex-1">
-            <div class="m-2 my-5 flex justify-between items-center">
-              <a id="auto" class="p-2 px-4 rounded-xl border-2 border-zinc-700 active cursor-pointer">Auto</a>
-              <div class="mx-2">
-                <select name="themes" id="theme"
-                  class="p-2 my-3 bg-zinc-800 rounded-md border-zinc-700 placeholder-gray-400">
-                  <% themes.map((theme)=>{ %>
-                    <Option value="<%= theme.name %>">
-                      <%= theme.name %>
-                    </Option>;
-                    <% }) %>
-                </select>
+    <section class="py-10 md:py-20">
+      <div>
+        <h1 class="text-5xl py-8 font-bold flex justify-center items-center">
+          Generate Images on the go!
+        </h1>
+        <h2 class="text-2xl font-thin flex justify-center items-center">Create and serve images from a single link</h2>
+      </div>
+      <div class="py-10 md:py-28 flex flex-col justify-center items-center">
+        <div class="max-w-4xl">
+          <img id="image" class="rounded-xl shadow-xl my-4"
+            src="https://preview-generate.herokuapp.com/get?heading=Generate%20template%20images%20for%20Open%20Graph%20or%20Twitter&sub_heading=&theme=PinkyPurple&breakpoint=xl&author=Developed%20by%20Gokul%20Suresh" />
+        </div>
+        <div class="md:w-3/6 w-full p-5 lg:-mt-24 rounded-xl bg-black text-neutral-100 shadow-xl">
+
+          <div class="flex justify-between items-end">
+            <div class="w-full">
+              <div class="m-2 my-2 flex justify-between items-center">
+                <a id="auto" class="p-2 px-4 rounded-xl border-2 border-zinc-700 active cursor-pointer">Auto</a>
+                <div class="mx-2">
+                  <select name="themes" id="theme"
+                    class="p-2 bg-zinc-800 rounded-md border-zinc-700 placeholder-gray-400">
+                    <% themes.map((theme)=>{ %>
+                      <Option value="<%= theme.name %>">
+                        <%= theme.name %>
+                      </Option>;
+                      <% }) %>
+                  </select>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="" id="selectedAuto">
+                  <div class="flex flex-wrap" id="breakpoints">
+                    <% breakpoints.map((result)=>{ %>
+                      <div
+                        class=" p-2 m-3 w-10 h-10 text-center flex justify-center items-center rounded-full border-2 border-zinc-700 text-sm cursor-pointer"
+                        id="breakpoint" breakpoint="<%=result.breakpoint %>">
+                        <%= result.breakpoint %>
+                      </div>
+                      <% }) %>
+                  </div>
+                </div>
+                <div class="hidden flex my-3 inputs md:flex-row flex-col w-full" id="selectedManual">
+                  <div class="flex px-2 p-2 w-full">
+                    <span
+                      class="inline-flex items-center px-3 text-sm text-gray-900  rounded-l-md border border-r-0  bg-zinc-700 border-zinc-700">
+                      ↕
+                    </span>
+                    <input type="number" id="height"
+                      class="rounded-none rounded-r-lg border text-gray-100  focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  bg-zinc-800 border-zinc-700 placeholder-gray-400 focus:ring-blue-500"
+                      placeholder="height">
+                  </div>
+                  <div class="flex p-2 w-full">
+                    <span
+                      class="inline-flex items-center px-3 text-sm text-gray-900  rounded-l-md border border-r-0  bg-zinc-700 border-zinc-700">
+                      ↔
+                    </span>
+                    <input type="number" id="width"
+                      class="rounded-none rounded-r-lg border text-gray-100  focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  bg-zinc-800 border-zinc-700 placeholder-gray-400 focus:ring-blue-500"
+                      placeholder="width">
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex">
-              <div class="" id="selectedAuto">
-                <div class="flex mx-2 " id="breakpoints">
-                  <% breakpoints.map((result)=>{ %>
-                    <div
-                      class=" p-2 m-3 w-10 h-10 text-center flex justify-center items-center rounded-full border-2 border-zinc-700 text-sm cursor-pointer"
-                      id="breakpoint" breakpoint="<%=result.breakpoint %>">
-                      <%= result.breakpoint %>
-                    </div>
-                    <% }) %>
-                </div>
-              </div>
-              <div class="hidden flex my-3 inputs" id="selectedManual">
-                <div class="flex px-2">
-                  <span
-                    class="inline-flex items-center px-3 text-sm text-gray-900  rounded-l-md border border-r-0  bg-zinc-700 border-zinc-700">
-                    ↕
-                  </span>
-                  <input type="number" id="height"
-                    class="rounded-none rounded-r-lg border text-gray-100  focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  bg-zinc-800 border-zinc-700 placeholder-gray-400 focus:ring-blue-500"
-                    placeholder="height">
-                </div>
-                <div class="flex">
-                  <span
-                    class="inline-flex items-center px-3 text-sm text-gray-900  rounded-l-md border border-r-0  bg-zinc-700 border-zinc-700">
-                    ↔
-                  </span>
-                  <input type="number" id="width"
-                    class="rounded-none rounded-r-lg border text-gray-100  focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  bg-zinc-800 border-zinc-700 placeholder-gray-400 focus:ring-blue-500"
-                    placeholder="width">
-                </div>
-              </div>
+
+          </div>
+
+          <div class="flex md:flex-row flex-col w-full justify-between items-center py-2">
+            <div class=" flex p-2 w-full ">
+              <span
+                class="inline-flex items-center px-3 text-sm text-gray-900  rounded-l-md border border-r-0  bg-zinc-700 border-zinc-700">
+                H1
+              </span>
+              <input type="text" id="heading"
+                class="rounded-none rounded-r-lg border text-gray-100  focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  bg-zinc-800 border-zinc-700 placeholder-gray-400 focus:ring-blue-500"
+                placeholder="Heading" value="Insert heading here">
+            </div>
+            <div class="flex p-2 w-full">
+              <span
+                class="inline-flex items-center px-3 text-sm text-gray-900  rounded-l-md border border-r-0  bg-zinc-700 border-zinc-700">
+                H2
+              </span>
+              <input type="test" id="sub_heading"
+                class="rounded-none rounded-r-lg border text-gray-100  focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  bg-zinc-800 border-zinc-700 placeholder-gray-400 focus:ring-blue-500"
+                placeholder="Sub Heading" value="insert sub heading here">
+            </div>
+            <div class="flex p-2 w-full">
+              <span
+                class="inline-flex items-center px-3 text-sm text-gray-900  rounded-l-md border border-r-0  bg-zinc-700 border-zinc-700">
+                H3
+              </span>
+              <input type="text" id="author"
+                class="rounded-none rounded-r-lg border text-gray-100  focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  bg-zinc-800 border-zinc-700 placeholder-gray-400 focus:ring-blue-500"
+                placeholder="Author">
             </div>
           </div>
 
-        </div>
 
-        <div class="flex justify-between items-center py-2 mt-4">
-          <div class=" flex px-2 ">
-            <span
-              class="inline-flex items-center px-3 text-sm text-gray-900  rounded-l-md border border-r-0  bg-zinc-700 border-zinc-700">
-              H1
-            </span>
-            <input type="text" id="heading"
-              class="rounded-none rounded-r-lg border text-gray-100  focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  bg-zinc-800 border-zinc-700 placeholder-gray-400 focus:ring-blue-500"
-              placeholder="Heading" value="Insert heading here">
+
+          <div
+            class="md:flex flex-col justify-center items-center p-2 m-5 font-mono bg-zinc-800 rounded-xl text-center">
+            <p id="url" class="break-all flex items-center justify-center md:w-full text-center p-2"></p>
+            <a class="p-2 cursor-pointer" id="link">🔗</a>
           </div>
-          <div class="flex px-2">
-            <span
-              class="inline-flex items-center px-3 text-sm text-gray-900  rounded-l-md border border-r-0  bg-zinc-700 border-zinc-700">
-              H2
-            </span>
-            <input type="test" id="sub_heading"
-              class="rounded-none rounded-r-lg border text-gray-100  focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  bg-zinc-800 border-zinc-700 placeholder-gray-400 focus:ring-blue-500"
-              placeholder="Sub Heading" value="insert sub heading here">
-          </div>
-          <div class="flex px-2">
-            <span
-              class="inline-flex items-center px-3 text-sm text-gray-900  rounded-l-md border border-r-0  bg-zinc-700 border-zinc-700">
-              H3
-            </span>
-            <input type="text" id="author"
-              class="rounded-none rounded-r-lg border text-gray-100  focus:border-blue-500 block flex-1 min-w-0 w-full text-sm  p-2.5  bg-zinc-800 border-zinc-700 placeholder-gray-400 focus:ring-blue-500"
-              placeholder="Author">
-          </div>
-        </div>
-
-
-
-        <div class="flex justify-center items-center p-2 m-5 font-mono bg-zinc-800 rounded-xl text-center">
-          <p id="url" class="break-words max-w-lg px-2"></p>
-          <a class="p-2 cursor-pointer" id="link">🔗</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
+  <!-- <div class="fixed bottom-4 left-[25%] md:left-[42%] bg-blue-500 rounded-xl ">
+    <div class="p-2">🔥Link copied to clipboard </div>
+  </div> -->
   <script src="/public/scripts/script.js" type="text/javascript"></script>
 </body>
 

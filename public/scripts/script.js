@@ -19,9 +19,9 @@ const link = document.getElementById("link")
 let options = {
   heading: "Insert heading here",
   sub_heading: "insert sub heading here",
-  theme: "PinkyPurple "
+  theme: "PinkyPurple"
 }
-let gen_url = "https://preview-generate.herokuapp.com/get?"
+let genUrl = "https://preview-generate.herokuapp.com/get?"
 const renderSelection = (e) => {
   e.preventDefault()
   auto.classList.toggle("active")
@@ -53,7 +53,7 @@ const genURL = () => {
       str.push(encodeURIComponent(key) + "=" + encodeURIComponent(options[key]));
     }
   const params = str.join("&");
-  return gen_url + params
+  return genUrl + params
 }
 
 [height, width, heading, subHeading, author, theme].map((item) => {
@@ -67,7 +67,9 @@ const genURL = () => {
   })
 })
 
-link.addEventListener("click", (e) => {
-  image.src = genURL()
+link.addEventListener("click", () => {
+  finalUrl = genURL()
+  image.src = finalUrl
+  navigator.clipboard.writeText(finalUrl)
 })
 url.innerHTML = genURL()
