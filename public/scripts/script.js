@@ -70,8 +70,28 @@ const genURL = () => {
 })
 
 link.addEventListener("click", () => {
-  finalUrl = genURL()
+  let finalUrl = genURL()
   image.src = finalUrl
-  navigator.clipboard.writeText(finalUrl)
+
+  let currentMessage = link.firstElementChild.textContent
+  let updatedMessage = "🔥Link copied to clipboard"
+  copyToClip({
+    text: finalUrl,
+    currentMessage,
+    updatedMessage
+  })
 })
+const copyToClip = ({ text, currentMessage, updatedMessage }) => {
+  navigator.clipboard.writeText(text)
+  link.firstElementChild.innerHTML = updatedMessage
+  link.classList.remove("bg-neutral-900")
+  link.classList.add("active")
+  console.log(link.classList)
+  setTimeout(() => {
+    link.firstElementChild.innerHTML = currentMessage
+    link.classList.add("bg-neutral-900")
+    link.classList.remove("active")
+  }, 3000)
+}
+
 url.innerHTML = genURL()

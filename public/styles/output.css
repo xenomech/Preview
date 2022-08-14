@@ -558,18 +558,6 @@ video {
   color: rgb(245 245 245 / var(--tw-text-opacity));
 }
 
-.fixed {
-  position: fixed;
-}
-
-.bottom-4 {
-  bottom: 1rem;
-}
-
-.left-\[25\%\] {
-  left: 25%;
-}
-
 .m-5 {
   margin: 1.25rem;
 }
@@ -750,11 +738,6 @@ video {
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -901,10 +884,6 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 @media (min-width: 768px) {
-  .md\:left-\[42\%\] {
-    left: 42%;
-  }
-
   .md\:mx-5 {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
