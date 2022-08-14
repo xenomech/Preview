@@ -667,6 +667,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .break-words {
   overflow-wrap: break-word;
 }
