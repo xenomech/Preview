@@ -9,6 +9,6 @@ use cases :
 
 Todo (development)
 
--[ ] Bugs 
--[ ] include more themes
--[ ] scopes for optimization
+-[] Bugs 
+-[] include more themes
+-[] scopes for optimization
