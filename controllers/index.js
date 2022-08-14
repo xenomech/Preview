@@ -4,7 +4,7 @@ const get = (req, res) => {
   try {
     const height = parseInt(req.query.height) || 630;
     const width = parseInt(req.query.width) || 1200;
-    const theme = req.query.theme || "themeOne";
+    const theme = req.query.theme || "Blackberry";
     const heading = req.query.heading || "";
     const subHeading = req.query.sub_heading || "";
     const author = req.query.author || "";
